@@ -1,42 +1,73 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body{
+  background-color: #e4e4e7;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header{
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  padding: 54px;
 }
 
-.card {
-  padding: 2em;
+.card{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  /* width: 100%; */
+}
+
+.card> img{
+  place-self: center;
+  width: 300px;
+  height: 300px;
+}
+
+.pokemon-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+footer img{
+  display: flex;
+  width: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer img:hover{
+  transform: rotate(360deg) scale(1.1);
 }
